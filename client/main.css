@@ -2,7 +2,11 @@
 div{
     white-space: nowrap;;
 }
-
+.carePro{
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 10px;
+}
 .half{
     width:50%;
     white-space: normal;

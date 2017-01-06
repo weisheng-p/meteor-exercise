@@ -3,11 +3,11 @@
 </header>
 
 <div ng-repeat="carePro in $ctrl.carePros">
-    <div class="carePro">
+    <div class="carePro" ng-click="carePro.show=(carePro.show==null||!carePro.show)">
         {{carePro.first_name}} {{carePro.last_name}} -
         <a href="mailto:{{carePro.email_address}}">{{carePro.email_address}}</a> -
         <a href="tel:{{carePro.phone_number}}">{{carePro.phone_number}}</a>
-        <div>
+        <div class="ng-hide carePro-details" ng-show="carePro.show">
             <div class="half experience">
                 <h2>Experienced To</h2>
                 <div class="task-group" ng-repeat="(task, levels) in carePro.skills_qualifications.task_level_experience">
