@@ -1,0 +1,33 @@
+<header>
+    <h1>CarePro List</h1>
+</header>
+
+<div ng-repeat="carePro in $ctrl.carePros">
+    <div class="carePro">
+        {{carePro.first_name}} {{carePro.last_name}} -
+        <a href="mailto:{{carePro.email_address}}">{{carePro.email_address}}</a> -
+        <a href="tel:{{carePro.phone_number}}">{{carePro.phone_number}}</a>
+        <div>
+            <div class="half experience">
+                <h2>Experienced To</h2>
+                <div class="task-group" ng-repeat="(task, levels) in carePro.skills_qualifications.task_level_experience">
+                    <div class="task">{{task}}</div>
+                    <ul ng-show="!levels.length"><li>-</li></ul>
+                    <ul ng-show="levels.length">
+                        <li ng-repeat="level in levels">{{level}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="half willing">
+                <h2>Willing To</h2>
+                <div class="task-group" ng-repeat="(task, levels) in carePro.skills_qualifications.task_level_willingness">
+                    <div class="task">{{task}}</div>
+                    <ul ng-show="!levels.length"><li>-</li></ul>
+                    <ul ng-show="levels.length">
+                        <li ng-repeat="level in levels">{{level}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

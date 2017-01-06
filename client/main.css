@@ -1,1 +1,19 @@
 /* CSS declarations go here */
+div{
+    white-space: nowrap;;
+}
+
+.half{
+    width:50%;
+    white-space: normal;
+}
+.experience,.willing{
+    vertical-align: top;
+    display: inline-block;
+}
+.task{
+    font-weight: bold;
+}
+.task-group{
+    padding:10px;
+}
