@@ -3,8 +3,8 @@
     <button ng-click="$ctrl.addRandomCarePro()">Add a somewhat random CarePro</button>
     <button ng-click="$ctrl.addExampleCarePro()">Add Example CarePro</button>
 </header>
-
-<div ng-repeat="carePro in $ctrl.carePros">
+<h2>Found {{$ctrl.matchedCarePros.length}} {{$ctrl.matched }} CarePro out of all {{$ctrl.carePros.length}}</h2>
+<div ng-repeat="carePro in $ctrl.matchedCarePros">
     <div class="carePro" ng-click="carePro.show=(carePro.show==null||!carePro.show)">
         {{carePro.first_name}} {{carePro.last_name}} -
         <a href="mailto:{{carePro.email_address}}">{{carePro.email_address}}</a> -
@@ -34,4 +34,4 @@
         </div>
     </div>
 </div>
-<div ng-show="!$ctrl.carePros.length" class="ng-hide">No CarePro Found, try adding one</div>
+<div ng-show="!$ctrl.matchedCarePros.length" class="ng-hide">- No CarePro Found, try adding one -</div>
