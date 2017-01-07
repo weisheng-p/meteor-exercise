@@ -75,7 +75,7 @@ function generateRandomCarePro(){
         "email_address" : email,
         "first_name" : firstName,
         "last_name" : lastName,
-        "phone_number" : "+6596273428",
+        "phone_number" : phone,
         "status" : "Approved-Pending Docs",
         "created_at" : Date.parse("2016-12-22T04:37:00.775+0000"),
         "updated_at" : Date.parse("2016-12-22T04:37:00.776+0000"),
