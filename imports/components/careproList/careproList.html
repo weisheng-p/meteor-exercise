@@ -1,5 +1,7 @@
 <header>
     <h1>CarePro List</h1>
+    <button ng-click="$ctrl.addRandomCarePro()">Add a somewhat random CarePro</button>
+    <button ng-click="$ctrl.addExampleCarePro()">Add Example CarePro</button>
 </header>
 
 <div ng-repeat="carePro in $ctrl.carePros">
@@ -7,6 +9,7 @@
         {{carePro.first_name}} {{carePro.last_name}} -
         <a href="mailto:{{carePro.email_address}}">{{carePro.email_address}}</a> -
         <a href="tel:{{carePro.phone_number}}">{{carePro.phone_number}}</a>
+        <button ng-click="$ctrl.removeCarePro(carePro._id)">Remove this CarePro</button>
         <div class="ng-hide carePro-details" ng-show="carePro.show">
             <div class="half experience">
                 <h2>Experienced To</h2>
@@ -31,3 +34,4 @@
         </div>
     </div>
 </div>
+<div ng-show="!$ctrl.carePros.length" class="ng-hide">No CarePro Found, try adding one</div>

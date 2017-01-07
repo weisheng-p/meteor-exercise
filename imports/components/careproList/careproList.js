@@ -1,6 +1,6 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
-import { exampleCarePro, CarePro } from '../../api/carepro.js';
+import { exampleCarePro, CarePro, generateRandomCarePro } from '../../api/carepro.js';
 
 import template from './careproList.html'
 
@@ -9,9 +9,18 @@ class CareProListCtrl {
         $scope.viewModel(this);
         this.helpers({
             carePros(){
-                return [exampleCarePro];
+                return CarePro.find({})
             }
         });
+    }
+    addExampleCarePro(){
+        CarePro.insert(exampleCarePro);
+    }
+    addRandomCarePro(){
+        CarePro.insert(generateRandomCarePro());
+    }
+    removeCarePro(id){
+        CarePro.remove({_id: id});
     }
 }
 
