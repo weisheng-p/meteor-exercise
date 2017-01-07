@@ -55,4 +55,4 @@ export const VisitRequest = {
         ]
     },
     "created_at" : Date.parse("2016-12-17T02:43:37.017+0000")
-}
+};

@@ -40,7 +40,7 @@ const validTaskSet = {
 };
 
 var firstNameSet = ['Daniel', 'Avery', 'Taylor', 'Carter', 'Jessie', 'Jamie'];
-var lastNameSet = ['Doe', 'Summer', 'Carpenter', 'Murphy', 'Lee', 'Brown']
+var lastNameSet = ['Doe', 'Summer', 'Carpenter', 'Murphy', 'Lee', 'Brown'];
 
 function randomInt(low, high){
     return Math.floor(Math.random() * (high - low + 1) + low);
@@ -49,7 +49,7 @@ function selectRandomSet(set){
     return set.filter(()=>randomInt(0, 1) == 1);
 }
 function selectRandom(set){
-    return set[randomInt(0, set.length-1)]
+    return set[randomInt(0, set.length-1)];
 }
 function generateNumberString(length){
     return [... Array(length)].map(()=>randomInt(0,9)).join('');
@@ -59,7 +59,7 @@ function generateRandomTaskSet(){
     for (let task of Object.keys(validTaskSet)){
         tasks[task] = selectRandomSet(validTaskSet[task]);
     }
-    return tasks
+    return tasks;
 }
 function generateRandomCarePro(){
     var gender = 'Female';

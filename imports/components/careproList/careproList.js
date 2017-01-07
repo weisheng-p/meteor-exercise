@@ -3,14 +3,14 @@ import angularMeteor from 'angular-meteor';
 import { exampleCarePro, CarePro, generateRandomCarePro } from '../../api/carepro.js';
 import { VisitRequest } from '../../api/visitRequest.js';
 
-import template from './careproList.html'
+import template from './careproList.html';
 
 class CareProListCtrl {
     constructor($scope){
         $scope.viewModel(this);
         this.helpers({
             carePros(){
-                return CarePro.find({})
+                return CarePro.find({});
             },
             matchedCarePros(){
                 var experienceQuery = {};
@@ -50,4 +50,4 @@ export default angular.module('careproList',[
     .component('careproList', {
         templateUrl: 'imports/components/careproList/careproList.html',
         controller: ['$scope', CareProListCtrl]
-    })
+    });
