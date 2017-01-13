@@ -27,7 +27,7 @@ class CareProListCtrl {
                     this.matched = "Willing and Experienced";
                     return willingAndExperienceds;
                 } else {
-                    this.matched = "Willing"
+                    this.matched = "Willing";
                     return CarePro.find(willingQuery);
                 }
             }
